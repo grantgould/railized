@@ -2,3 +2,7 @@
 docker-compose run --no-deps web rails new . --database=postgresql --force 
 
 docker-compose down
+
+docker-compose run --no-deps web rails webpacker:install
+
+docker-compose down
