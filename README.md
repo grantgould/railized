@@ -73,7 +73,7 @@ default: &default
 Update config/cable.yml file. Add url and change adapter to Redis to default definition.. 
 
 ```yaml
-development:
+development:  
   adapter: redis
   url: <%= ENV.fetch("REDIS_URL") { "redis://redis:6379/1" } %>
 ```

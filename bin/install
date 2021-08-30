@@ -1,8 +1,10 @@
 #!/bin/bash
-docker-compose run --no-deps web rails new . --database=postgresql --force 
+docker-compose run --no-deps web rails new . --database=postgresql --force
 
 docker-compose down
 
-docker-compose run --no-deps web rails webpacker:install
+# Hack Fix
+# Installing Webpacker manually because "rails new" errors on webpacker
+docker-compose run --no-deps web rails webpacker:install # fix
 
 docker-compose down
